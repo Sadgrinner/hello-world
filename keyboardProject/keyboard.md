@@ -29,6 +29,7 @@
 ### How to remap keys in Windows
 
 One must edit the registry keys. To do that:
+
 1. Go to `Start > Run...`, and type in `regedit`.  (Or press `Win+R` and type `regedit` in the box).
 2. In the editor that opens up, double-click on the following folders in order...
   * HKEY_LOCAL_MACHINE
@@ -41,16 +42,14 @@ One must edit the registry keys. To do that:
 5. Note, the `Type` of your new entry is `REG_BINARY`.
 6. To swap the Caps Lock Key and the Backspace key, right-click your Scancode Map and select `Modify...`.  Enter the following without spaces: `00000000 00000000 03000000 0e003a00 3a000e00 00000000`
   * Note: the editor will display the value slightly differently - even though you are entering 48 characters, it will display them in groups of two.  Like this:
-```
-0000	00 00 00 00 00 00 00 00 ........
-0008	03 00 00 00 0E 00 3A 00 ........
-0010	3A 00 0E 00 00 00 00 00 ........
-0018
-```
-The values on the left (that you cannot modify) are merely hexidecimal line markers.  IE: `0000` means 'position 0', `0008` means 'position 8', `0010` means 'position 16', `0018` means 'position 24'.  That's hex for you!
+    ```
+    0000	00 00 00 00 00 00 00 00 ........
+    0008	03 00 00 00 0E 00 3A 00 ........
+    0010	3A 00 0E 00 00 00 00 00 ........
+    0018
+    ```
+  * The values on the left (that you cannot modify) are merely hexidecimal line markers.  IE: `0000` means 'position 0', `0008` means 'position 8', `0010` means 'position 16', `0018` means 'position 24'.  That's hex for you!
 7. So.  What does the `00000000 00000000 03000000 0e003a00 3a000e00 00000000` String *mean*? 
-
-
     The first two blocks of 16 zeros are just there to waste space.
     
     The third block, “03000000”, represents how many keys we are going to re-map plus 1.  We are remapping two keys in this example, thus the '3' is used.
@@ -62,7 +61,6 @@ The values on the left (that you cannot modify) are merely hexidecimal line mark
     The fifth block, you'll notice, is the same two groups of four in reverse order: "3a00" followed by "0e00".  Again, the first group of four is the key we are mapping *to* ("3a00", or the caps lock key), and the second group of four is the key we are modifying ("0e00", or the backspace key).  So the entire fifth section is an instruction to 'map the caps lock functionality to the backspace key'.
     
     The final 8 zeros are there to waste space as the null terminator.
-
 8. Finally, close Regedit and restart your computer.
   * Thanks to http://theangryskunk.blogspot.com/2011/06/who-uses-capslock-swap-it-with.html for the inspiration and [here](http://www.howtogeek.com/howto/windows-vista/disable-caps-lock-key-in-windows-vista/) for the explanation.  With this understanding you should be able to manually edit your keyboard layout to your heart's content!
   
