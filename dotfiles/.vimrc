@@ -1,5 +1,5 @@
 " Note: in .vimrc you use double quote for comments
-" curl https://github.com/Sadgrinner/hello-world/blob/master/dotfiles/.vimrc -o ~/.vimrc
+" curl https://raw.githubusercontent.com/Sadgrinner/hello-world/master/dotfiles/.vimrc -o ~/.vimrc
 
 " TOGGLE AUTO-INDENTING
 set pastetoggle=<F2>

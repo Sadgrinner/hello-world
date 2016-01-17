@@ -1,4 +1,4 @@
-# curl https://github.com/Sadgrinner/hello-world/blob/master/dotfiles/.gitignore -o ~/.gitignore
+# curl https://raw.githubusercontent.com/Sadgrinner/hello-world/master/dotfiles/.gitignore -o ~/.gitignore
 
 # Compiled source #
 ###################
