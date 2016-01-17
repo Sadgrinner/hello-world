@@ -1,0 +1,83 @@
+# Compiled source #
+###################
+*.class
+*.com
+*.dll
+*.ear
+*.exe
+*.o
+*.pyc
+*.pyo
+*.so
+*.war
+
+# Temporary files #
+###################
+*.bak
+*.swo
+*.swp
+*~
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built-in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# IDE generated files #
+#######################
+.~lock.*
+.buildpath
+.classpath
+eclipse-bin
+.idea
+*.iml
+nbproject
+.project
+.settings
+composer.lock
+
+# Build files #
+###############
+build
+bin
+
+# Apollo files #
+################
+/.apollorc
+/apollo-overrides
+
+# Android-related files #
+#########################
+gen
+.android
+local.properties
+
+# SASS #
+########
+.sass-cache
+
