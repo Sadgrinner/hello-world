@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# curl https://github.com/Sadgrinner/hello-world/blob/master/dotfiles/update-everything.sh -o ~/update-everything.sh
+
 successfully() {
 	$* || (echo "\nfailed" 1>&2 && exit 1)
 }

@@ -1,3 +1,5 @@
+# curl https://github.com/Sadgrinner/hello-world/blob/master/dotfiles/.gitignore -o ~/.gitignore
+
 # Compiled source #
 ###################
 *.class

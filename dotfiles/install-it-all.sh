@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+#  curl https://raw.githubusercontent.com/Sadgrinner/hello-world/master/dotfiles/install-it-all.sh -o ~/install-it-all.sh
+
 successfully() {
 	$* || (echo "\nfailed" 1>&2 && exit 1)
 }
@@ -8,12 +10,13 @@ fancy_echo() {
 	echo "\n$1"
 }
 
-fancy_echo "Checking .vim/undodir"
+fancy_echo "Checking ~/.vim/undodir and ~/.vim/backupdir"
 mkdir -m 700 -p ~/.vim/undodir
+mkdir -m 700 -p ~/.vim/backupdir
 
 fancy_echo "Checking git installation"
 command -v git > /dev/null 2>&1 || {
-	fancy_echo "Updating git (this can be a very slow process -let it finish)"
+	fancy_echo "Updating git (this can be a very slow process - let it finish)"
 	successfully pact update git
 }
 
@@ -51,4 +54,5 @@ fancy_echo "Updating gitconfig"
 	successfully git config --global github.user "Sadgrinner"
 	successfully git config --global user.name "Sadgrinner"
 	successfully git config --global user.email "Sadgrinner@users.noreply.github.com"
+	successfully git config --global core.excludesfile "~/.gitignore"
 #	successfully git config --global github.token TOKEN
