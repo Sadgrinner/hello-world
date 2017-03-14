@@ -11,6 +11,9 @@ Or see my [Words With Friends resources](wordsWithFriends) to see a collection o
 ### On editing
 For editing ```README.md``` files, I like using the live (Github-flavored) Markdown Editor [here](http://jbt.github.io/markdown-editor/) or [here](http://github-preview.herokuapp.com/).
 
+### Scripting
+For handling command line args for tools that I build, try http://args4j.kohsuke.org/
+
 ### A Keyboard project
 A physical project: designing a [custom keyboard](keyboardProject/keyboard.md) with the Carpalx QGMLWY layout.
 
